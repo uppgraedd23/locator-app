@@ -32,7 +32,23 @@ model Session {
 }
 
 model Store {
-  id    Int    @id @default(autoincrement())
-  name  String
-  url   String @unique
+  id                 Int     @id @default(autoincrement())
+  name               String
+  url                String  @unique
+  address1           String?
+  address2           String?
+  city               String?
+  zip                String?
+  province           String?
+  country            String?
+  phone              String?
+  country_code       String?
+  country_name       String?
+  active             Boolean?
+  legacy             Boolean?
+  admin_graphql_api_id String?
+  openingHours       String?
+  closingHours       String?
+  freeParking        Boolean?
+  storeName          String?
 }
