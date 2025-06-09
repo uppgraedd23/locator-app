@@ -8,7 +8,7 @@ const containerStyle = {
 
 const Map = ({ locations }) => {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: 'AIzaSyCrS1WMwIuKwYEYm6oir3d3obZU7Yw4tMo',
+    googleMapsApiKey: 'AIzaSyCrS1WMwIuKwYEYm6oir3d3obZU7Yw4tMo',// move to .env
   });
   
   const [locationsWithCoords, setLocationsWithCoords] = useState([]);
@@ -32,7 +32,6 @@ const Map = ({ locations }) => {
     });
   };
 
-  // Обработка локаций
   useEffect(() => {
     if (!isLoaded || !locations?.length) return;
 

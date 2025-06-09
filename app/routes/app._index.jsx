@@ -14,7 +14,7 @@ import {
 } from "@shopify/polaris";
 import { TitleBar, useAppBridge } from "@shopify/app-bridge-react";
 import { authenticate } from "../shopify.server";
-import Map from "../components/Map";
+import Map from "../components/Map.jsx";
 import prisma from "../db.server";
 import { json } from "@remix-run/node";
 
@@ -31,7 +31,6 @@ export default function Index() {
   return (
     <Page>
       <TitleBar title="Locator app"></TitleBar>
-
       <Map locations={locations} />
     </Page>
   );
